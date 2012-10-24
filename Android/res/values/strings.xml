@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">ArduDroid</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="title_activity_ardu_droid">ArduDroid</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+</resources>
