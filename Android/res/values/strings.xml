@@ -1,9 +1,12 @@
 <resources>
-
     <string name="app_name">ArduDroid</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Configurações</string>
     <string name="title_activity_ardu_droid">ArduDroid</string>
     <string name="title_activity_splash">SplashActivity</string>
-
+	<string name="no_connection">Sem conexão com a internet.</string>
+	<string name="configure">Configurar</string>
+	<string name="retry">Tentar Novamente</string>
+	<string name="quit">Sair</string>
+	<string name="what_to_do">"O que deseja fazer?"</string>
 </resources>
