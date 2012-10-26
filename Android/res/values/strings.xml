@@ -8,5 +8,13 @@
 	<string name="configure">Configurar</string>
 	<string name="retry">Tentar Novamente</string>
 	<string name="quit">Sair</string>
+	<string name="monitor">"Monitoramento"</string>
+	<string name="control">"Controle"</string>
 	<string name="what_to_do">"O que deseja fazer?"</string>
+	<string name="about">"Sobre"</string>
+<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
+<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
+<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
+<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
+	
 </resources>

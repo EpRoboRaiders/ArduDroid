@@ -14,7 +14,7 @@ public class SplashActivity extends Activity implements Runnable {
 
 	public Intent intentSystemConfigScreen = new Intent(android.provider.Settings.ACTION_SETTINGS);
 	
-	private AlertDialog alertDialog;
+	private AlertDialog noConnectionDialog;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class SplashActivity extends Activity implements Runnable {
 		return false;
 	}
 	
-	public void verify() {
+	public void verifyInternetConnection() {
 		if(isInternetOn()) {
 			callMainScreen();
 		} else {
@@ -44,7 +44,7 @@ public class SplashActivity extends Activity implements Runnable {
 	
 	@Override
 	public void run() {
-		verify();
+		verifyInternetConnection();
 	}
 	
 	public void callMainScreen() {
@@ -61,19 +61,19 @@ public class SplashActivity extends Activity implements Runnable {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode == 0 && resultCode == RESULT_CANCELED) {
-			verify();
+			verifyInternetConnection();
 		}
 	}
 
 	public void showDialogNoConnection() {
-		alertDialog = new AlertDialog.Builder(this).create();
-		alertDialog.setTitle(getString(R.string.no_connection));
-		alertDialog.setMessage(getString(R.string.what_to_do));
-		alertDialog.setCanceledOnTouchOutside(false);
-		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,getString(R.string.configure), btnPositive);
-		alertDialog.setButton(DialogInterface.BUTTON_NEUTRAL,getString(R.string.retry), btnNeutral);
-		alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE,getString(R.string.quit), btnNegative); 
-		alertDialog.show();
+		noConnectionDialog = new AlertDialog.Builder(this).create();
+		noConnectionDialog.setTitle(getString(R.string.no_connection));
+		noConnectionDialog.setMessage(getString(R.string.what_to_do));
+		noConnectionDialog.setCanceledOnTouchOutside(false);
+		noConnectionDialog.setButton(DialogInterface.BUTTON_POSITIVE,getString(R.string.configure), btnPositive);
+		noConnectionDialog.setButton(DialogInterface.BUTTON_NEUTRAL,getString(R.string.retry), btnNeutral);
+		noConnectionDialog.setButton(DialogInterface.BUTTON_NEGATIVE,getString(R.string.quit), btnNegative); 
+		noConnectionDialog.show();
 	}
 	
 	private DialogInterface.OnClickListener btnPositive = new DialogInterface.OnClickListener() {
@@ -85,7 +85,6 @@ public class SplashActivity extends Activity implements Runnable {
 	
 	private DialogInterface.OnClickListener btnNegative = new DialogInterface.OnClickListener() {
 		public void onClick(DialogInterface dialog, int which) {
-			//dialog.dismiss();
 			finish();
 		}
 	};
@@ -93,7 +92,7 @@ public class SplashActivity extends Activity implements Runnable {
 	private DialogInterface.OnClickListener btnNeutral = new DialogInterface.OnClickListener() {
 		public void onClick(DialogInterface dialog, int which) {
 			dialog.dismiss();
-			verify();
+			verifyInternetConnection();
 		}
 	};
 	

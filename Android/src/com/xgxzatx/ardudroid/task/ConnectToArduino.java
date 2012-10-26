@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 
 
-public class CheckConnectivity extends AsyncTask<String, Object, String>{
+public class ConnectToArduino extends AsyncTask<String, Object, String>{
 
 	@Override
 	protected String doInBackground(String... params) {
