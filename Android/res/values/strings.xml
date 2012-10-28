@@ -12,6 +12,12 @@
 	<string name="control">"Controle"</string>
 	<string name="what_to_do">"O que deseja fazer?"</string>
 	<string name="about">"Sobre"</string>
+	<string name="developer1">"Guilherme Zat"</string>
+	<string name="developer1_email">"guilhermezat@outlook.com"</string>
+	<string name="developer1_about">"Engenheiro Eletricista formado na UNIOESTE no final de 2011, trabalha atualmente no ITAI - Instituto de Técnologia Aplicada e Inovação."</string>
+	<string name="application_about1">"Aplicativo com o intuito de automação residencial, possibilitando a visualização dos dados da residência."</string>
+	<string name="application_about2">"O aplicativo recebe e envia informações ao controlador, essas informações podem ser desde o consumo de energia atual, como o controle de lâmpadas e demais dispositivos da residência."</string>
+	<string name="developed_by">"Desenvolvido por:"</string>
 <!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
 <!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
 <!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->

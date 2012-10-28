@@ -25,7 +25,7 @@ public class MonitorFragment extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.monitor_tab_fragment, container, false);
+		View view = inflater.inflate(R.layout.fragment_monitor_tab, container, false);
 		
 		return view;
 	}

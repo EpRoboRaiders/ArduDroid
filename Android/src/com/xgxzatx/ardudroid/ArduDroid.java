@@ -1,20 +1,18 @@
 package com.xgxzatx.ardudroid;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
 import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Window;
-import com.fernandomantoan.latinoware.R;
-import com.fernandomantoan.latinoware.activity.AboutActivity;
+import com.xgxzatx.ardudroid.about.AboutActivity;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener.Tag;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener;
-
-import android.app.Application;
-import android.content.Intent;
-import android.os.Bundle;
 
 public class ArduDroid extends SherlockFragmentActivity {
 	
@@ -29,10 +27,10 @@ public class ArduDroid extends SherlockFragmentActivity {
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.ardudroid, menu);
-        return super.onCreateOptionsMenu(menu);
+    	MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.ardudroid, menu);
+        return true;
     }
-	
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

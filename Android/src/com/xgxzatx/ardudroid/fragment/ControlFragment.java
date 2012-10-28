@@ -25,7 +25,7 @@ public class ControlFragment extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.control_tab_fragment, container, false);
+		View view = inflater.inflate(R.layout.fragment_control_tab, container, false);
 		
 		return view;
 	}
