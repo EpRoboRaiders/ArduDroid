@@ -2,17 +2,16 @@ package com.xgxzatx.ardudroid;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.xgxzatx.ardudroid.connectivity.ManageConnectivity;
+
 public class SplashActivity extends Activity implements Runnable {
 
-	public Intent intentSystemConfigScreen = new Intent(android.provider.Settings.ACTION_SETTINGS);
+	ManageConnectivity connectivityManager = new ManageConnectivity(this);
 	
 	private AlertDialog noConnectionDialog;
 	
@@ -22,34 +21,14 @@ public class SplashActivity extends Activity implements Runnable {
 		setContentView(R.layout.activity_splash);
 		new Handler().post(this);
 	}
-
-	public final boolean isInternetOn() {
-		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-		if (activeNetwork != null){
-			boolean isConnected = activeNetwork.isConnected();
-			boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
-			if ( isConnected & isWiFi) {
-				return true;
-			} else {
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}
 	
-	public void verifyInternetConnection() {
-		if(isInternetOn()) {
+	@Override
+	public void run() {
+		if (connectivityManager.isInternetOn()){
 			callMainScreen();
 		} else {
 			showDialogNoConnection();
 		}
-	}
-	
-	@Override
-	public void run() {
-		verifyInternetConnection();
 	}
 	
 	public void callMainScreen() {
@@ -66,7 +45,7 @@ public class SplashActivity extends Activity implements Runnable {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode == 0 && resultCode == RESULT_CANCELED) {
-			verifyInternetConnection();
+			run();
 		}
 	}
 
@@ -98,7 +77,7 @@ public class SplashActivity extends Activity implements Runnable {
 	private DialogInterface.OnClickListener btnNeutral = new DialogInterface.OnClickListener() {
 		public void onClick(DialogInterface dialog, int which) {
 			dialog.dismiss();
-			verifyInternetConnection();
+			run();
 		}
 	};
 	

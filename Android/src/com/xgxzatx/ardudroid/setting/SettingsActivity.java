@@ -1,4 +1,4 @@
-package com.xgxzatx.ardudroid.settings;
+package com.xgxzatx.ardudroid.setting;
 
 import android.app.Activity;
 import android.os.Bundle;

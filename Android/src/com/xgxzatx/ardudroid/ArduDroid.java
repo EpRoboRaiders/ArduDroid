@@ -13,7 +13,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.xgxzatx.ardudroid.about.AboutActivity;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener.Tag;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener;
-import com.xgxzatx.ardudroid.settings.SettingsActivity;
+import com.xgxzatx.ardudroid.setting.SettingsActivity;
 
 public class ArduDroid extends SherlockFragmentActivity {
 	
