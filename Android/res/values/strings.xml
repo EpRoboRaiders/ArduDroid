@@ -32,6 +32,7 @@
     <string name="developed_by">Desenvolvido por:</string>
     <string name="developer1_name">Guilherme Zat</string>
     <string name="developer1_email">guilhermezat@outlook.com</string>
-    <string name="developer1_about">Engenheiro Eletricista formado na UNIOESTE no final de 2011, trabalha atualmente no ITAI - Instituto de Técnologia Aplicada e Inovação.</string>
-
+    <string name="developer2_name">Anderson R. Davi</string>
+    <string name="developer2_email">bicoco@gmail.com</string>
+        
 </resources>
