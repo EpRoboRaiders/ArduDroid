@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo.State;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -24,14 +24,19 @@ public class SplashActivity extends Activity implements Runnable {
 	}
 
 	public final boolean isInternetOn() {
-		ConnectivityManager connec =  (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-		if ( connec.getNetworkInfo(0).getState() == State.CONNECTED ||
-				connec.getNetworkInfo(1).getState() == State.CONNECTED ) {
-			return true;
-		} else if ( connec.getNetworkInfo(0).getState() == State.DISCONNECTED ||  connec.getNetworkInfo(1).getState() == State.DISCONNECTED  ) {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+		if (activeNetwork != null){
+			boolean isConnected = activeNetwork.isConnected();
+			boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+			if ( isConnected & isWiFi) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
 			return false;
 		}
-		return false;
 	}
 	
 	public void verifyInternetConnection() {
@@ -70,6 +75,7 @@ public class SplashActivity extends Activity implements Runnable {
 		noConnectionDialog.setTitle(getString(R.string.no_connection));
 		noConnectionDialog.setMessage(getString(R.string.what_to_do));
 		noConnectionDialog.setCanceledOnTouchOutside(false);
+		noConnectionDialog.setCancelable(false);
 		noConnectionDialog.setButton(DialogInterface.BUTTON_POSITIVE,getString(R.string.configure), btnPositive);
 		noConnectionDialog.setButton(DialogInterface.BUTTON_NEUTRAL,getString(R.string.retry), btnNeutral);
 		noConnectionDialog.setButton(DialogInterface.BUTTON_NEGATIVE,getString(R.string.quit), btnNegative); 

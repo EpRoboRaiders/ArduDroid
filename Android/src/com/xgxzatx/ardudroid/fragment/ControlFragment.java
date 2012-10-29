@@ -12,14 +12,14 @@ import com.xgxzatx.ardudroid.R;
 
 public class ControlFragment extends SherlockFragment {
 
-	private ArduDroidApp app;
+	//private ArduDroidApp app;
 	private SherlockFragmentActivity activity;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.activity = getSherlockActivity();
-		this.app = (ArduDroidApp) activity.getApplication();
+		//this.app = (ArduDroidApp) activity.getApplication();
 	}
 	
 	@Override

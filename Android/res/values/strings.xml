@@ -1,26 +1,37 @@
 <resources>
-    <string name="app_name">ArduDroid</string>
+    
+    <!--     Strings ArduDroidActivity -->
+    
+	<string name="app_name">ArduDroid</string>
+    <string name="title_activity_ardudroid">ArduDroid</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Configurações</string>
-    <string name="title_activity_ardu_droid">ArduDroid</string>
-    <string name="title_activity_splash">SplashActivity</string>
-	<string name="no_connection">Sem conexão com a internet.</string>
-	<string name="configure">Configurar</string>
-	<string name="retry">Tentar Novamente</string>
-	<string name="quit">Sair</string>
-	<string name="monitor">"Monitoramento"</string>
-	<string name="control">"Controle"</string>
-	<string name="what_to_do">"O que deseja fazer?"</string>
-	<string name="about">"Sobre"</string>
-	<string name="developer1">"Guilherme Zat"</string>
-	<string name="developer1_email">"guilhermezat@outlook.com"</string>
-	<string name="developer1_about">"Engenheiro Eletricista formado na UNIOESTE no final de 2011, trabalha atualmente no ITAI - Instituto de Técnologia Aplicada e Inovação."</string>
-	<string name="application_about1">"Aplicativo com o intuito de automação residencial, possibilitando a visualização dos dados da residência."</string>
-	<string name="application_about2">"O aplicativo recebe e envia informações ao controlador, essas informações podem ser desde o consumo de energia atual, como o controle de lâmpadas e demais dispositivos da residência."</string>
-	<string name="developed_by">"Desenvolvido por:"</string>
-<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
-<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
-<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
-<!-- 	<string name="what_to_do">"O que deseja fazer?"</string> -->
-	
+    <string name="monitor">Monitoramento</string>
+    <string name="control">Controle</string>
+    
+    <!--     Strings SplashActivity -->
+    
+    <string name="no_connection">Sem conexão com a internet.</string>
+    <string name="what_to_do">O que deseja fazer?</string>
+    <string name="quit">Sair</string>
+    <string name="retry">Tentar Novamente</string>
+    <string name="configure">Configurar</string>
+    
+	<!--     Strings SettingsActivity -->  
+    
+    <string name="title_activity_settings">Configurações ArduDroid</string>
+    <string name="settings">Configurações</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="ip_address_help">Endereço IP do controlador.</string>
+    
+    <!--     Strings AboutActivity --> 
+
+	<string name="title_activity_about">Sobre ArduDroid</string>
+    <string name="about">Sobre</string>
+    <string name="application_about1">Aplicativo com o intuito de automação residencial, possibilitando a visualização dos dados da residência.</string>
+    <string name="application_about2">O aplicativo recebe e envia informações ao controlador, essas informações podem ser desde o consumo de energia atual, como o controle de lâmpadas e demais dispositivos da residência.</string>
+    <string name="developed_by">Desenvolvido por:</string>
+    <string name="developer1_name">Guilherme Zat</string>
+    <string name="developer1_email">guilhermezat@outlook.com</string>
+    <string name="developer1_about">Engenheiro Eletricista formado na UNIOESTE no final de 2011, trabalha atualmente no ITAI - Instituto de Técnologia Aplicada e Inovação.</string>
+
 </resources>

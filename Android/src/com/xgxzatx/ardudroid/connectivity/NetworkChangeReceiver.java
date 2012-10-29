@@ -10,7 +10,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
 	  @Override
 	  public void onReceive(final Context context, final Intent intent) {
 		  //intent.getStringExtra();
-		  Log.w(ConnectivityReceiver.class.getSimpleName(), "action: "
+		  Log.w(NetworkChangeReceiver.class.getSimpleName(), "action: "
 	                + intent.getAction());
 	}
 }

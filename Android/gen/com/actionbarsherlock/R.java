@@ -926,6 +926,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout1=0x7f040033;
+        public static final int aboutTextView=0x7f040034;
         public static final int abs__action_bar=0x7f040022;
         public static final int abs__action_bar_container=0x7f040021;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -966,27 +967,29 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
+        public static final int applicationAboutTextView1=0x7f040035;
+        public static final int applicationAboutTextView2=0x7f040036;
         public static final int ardudroid_main_content=0x7f04003b;
-        public static final int control_tab_fragment=0x7f04003c;
+        public static final int control_tab_fragment=0x7f04003f;
+        public static final int developedByTextView=0x7f040037;
+        public static final int developer1AboutTextView=0x7f04003a;
+        public static final int developer1EMailTextView=0x7f040039;
+        public static final int developer1NameTextView=0x7f040038;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
+        public static final int ipAddressEditText=0x7f04003e;
+        public static final int ipAddressHelpTextView=0x7f04003c;
+        public static final int ipAddressTextView=0x7f04003d;
         public static final int listMode=0x7f040002;
-        public static final int menu_about=0x7f04003f;
-        public static final int menu_settings=0x7f04003e;
-        public static final int monitor_tab_fragment=0x7f04003d;
+        public static final int menu_about=0x7f040042;
+        public static final int menu_settings=0x7f040041;
+        public static final int monitor_tab_fragment=0x7f040040;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
-        public static final int textView1=0x7f040034;
-        public static final int textView2=0x7f040035;
-        public static final int textView3=0x7f040036;
-        public static final int textView4=0x7f040037;
-        public static final int textView5=0x7f040038;
-        public static final int textView6=0x7f040039;
-        public static final int textView7=0x7f04003a;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1019,19 +1022,21 @@ containing a value of this type.
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int activity_about=0x7f030017;
         public static final int activity_ardudroid=0x7f030018;
-        public static final int activity_splash=0x7f030019;
-        public static final int fragment_control_tab=0x7f03001a;
-        public static final int fragment_monitor_tab=0x7f03001b;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
-        public static final int sherlock_spinner_item=0x7f03001d;
+        public static final int activity_settings=0x7f030019;
+        public static final int activity_splash=0x7f03001a;
+        public static final int fragment_control_tab=0x7f03001b;
+        public static final int fragment_monitor_tab=0x7f03001c;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001d;
+        public static final int sherlock_spinner_item=0x7f03001e;
     }
     public static final class menu {
         public static final int activity_ardudroid=0x7f0b0000;
-        public static final int ardudroid=0x7f0b0001;
-        public static final int splash_screen=0x7f0b0002;
+        public static final int activity_settings=0x7f0b0001;
+        public static final int ardudroid=0x7f0b0002;
+        public static final int splash_screen=0x7f0b0003;
     }
     public static final class string {
-        public static final int about=0x7f09001b;
+        public static final int about=0x7f09001e;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f090000;
@@ -1077,24 +1082,35 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
+        /**      Strings ArduDroidActivity 
+         */
         public static final int app_name=0x7f09000f;
         public static final int application_about1=0x7f09001f;
         public static final int application_about2=0x7f090020;
-        public static final int configure=0x7f090015;
-        public static final int control=0x7f090019;
+        public static final int configure=0x7f090018;
+        public static final int control=0x7f090013;
         public static final int developed_by=0x7f090021;
-        public static final int developer1=0x7f09001c;
-        public static final int developer1_about=0x7f09001e;
-        public static final int developer1_email=0x7f09001d;
-        public static final int hello_world=0x7f090010;
-        public static final int menu_settings=0x7f090011;
-        public static final int monitor=0x7f090018;
+        public static final int developer1_about=0x7f090024;
+        public static final int developer1_email=0x7f090023;
+        public static final int developer1_name=0x7f090022;
+        public static final int hello_world=0x7f090011;
+        public static final int ip_address=0x7f09001b;
+        public static final int ip_address_help=0x7f09001c;
+        public static final int monitor=0x7f090012;
+        /**      Strings SplashActivity 
+         */
         public static final int no_connection=0x7f090014;
-        public static final int quit=0x7f090017;
-        public static final int retry=0x7f090016;
-        public static final int title_activity_ardu_droid=0x7f090012;
-        public static final int title_activity_splash=0x7f090013;
-        public static final int what_to_do=0x7f09001a;
+        public static final int quit=0x7f090016;
+        public static final int retry=0x7f090017;
+        public static final int settings=0x7f09001a;
+        /**      Strings AboutActivity 
+         */
+        public static final int title_activity_about=0x7f09001d;
+        public static final int title_activity_ardudroid=0x7f090010;
+        /**      Strings SettingsActivity 
+         */
+        public static final int title_activity_settings=0x7f090019;
+        public static final int what_to_do=0x7f090015;
     }
     public static final class style {
         public static final int AppTheme=0x7f0a0059;
@@ -2211,7 +2227,7 @@ containing a value of this type.
          */
         public static final int[] SherlockSpinner = {
             0x010100af, 0x01010175, 0x01010176, 0x0101017b,
-            0x01010262, 0x010102ac, 0x010102ad, 0x010103fd
+            0x01010262, 0x010102ac, 0x010102ad, 0x010103ef
         };
         /**
           <p>

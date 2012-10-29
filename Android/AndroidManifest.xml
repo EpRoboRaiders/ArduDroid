@@ -2,19 +2,19 @@
     package="com.xgxzatx.ardudroid"
     android:versionCode="1"
     android:versionName="1.0" >
-	
+
     <uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
-
+
     <application
+        android:name=".ArduDroidApp"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".ArduDroidApp">
+        android:theme="@style/AppTheme" >
         <receiver
             android:name=".connectivity.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver" >
@@ -23,26 +23,28 @@
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
             </intent-filter>
         </receiver>
+
         <activity
             android:name=".SplashActivity"
-            android:label="@string/title_activity_ardu_droid" >
+            android:label="@string/title_activity_ardudroid" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".ArduDroid"
-            android:label="@string/title_activity_ardu_droid">
+            android:label="@string/title_activity_ardudroid" >
         </activity>
-        
         <activity
             android:name=".about.AboutActivity"
-            android:label="@string/app_name">
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/title_activity_settings" >
         </activity>
     </application>
-
 
 </manifest>

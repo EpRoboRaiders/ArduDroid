@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/ipAddressHelpTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/ip_address_help" />
+        
+    <TextView
+        android:id="@+id/ipAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dip"
+        android:layout_below="@id/ipAddressHelpTextView"
+        android:text="@string/ip_address" />
+
+    <EditText
+        android:id="@+id/ipAddressEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ipAddressTextView"
+        android:layout_alignBaseline="@id/ipAddressTextView"
+        android:layout_alignBottom="@id/ipAddressTextView"
+        android:inputType="phone" />
+
+</RelativeLayout>

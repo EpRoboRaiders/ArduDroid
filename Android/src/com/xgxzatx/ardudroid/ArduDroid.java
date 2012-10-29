@@ -13,6 +13,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.xgxzatx.ardudroid.about.AboutActivity;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener.Tag;
 import com.xgxzatx.ardudroid.listener.ArdudroidTabListener;
+import com.xgxzatx.ardudroid.settings.SettingsActivity;
 
 public class ArduDroid extends SherlockFragmentActivity {
 	
@@ -36,6 +37,10 @@ public class ArduDroid extends SherlockFragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.menu_about) {
 			Intent intent = new Intent(this, AboutActivity.class);
+			startActivity(intent);
+		}
+		if (item.getItemId() == R.id.menu_settings) {
+			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);
