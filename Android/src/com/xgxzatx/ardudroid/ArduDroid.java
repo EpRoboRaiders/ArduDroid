@@ -11,8 +11,8 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.xgxzatx.ardudroid.about.AboutActivity;
-import com.xgxzatx.ardudroid.listener.ArdudroidTabListener.Tag;
-import com.xgxzatx.ardudroid.listener.ArdudroidTabListener;
+import com.xgxzatx.ardudroid.listener.ArduDroidTabListener.Tag;
+import com.xgxzatx.ardudroid.listener.ArduDroidTabListener;
 import com.xgxzatx.ardudroid.setting.SettingsActivity;
 
 public class ArduDroid extends SherlockFragmentActivity {
@@ -50,7 +50,7 @@ public class ArduDroid extends SherlockFragmentActivity {
 	private void createTabs(int selectedTab) {
 
 		getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		TabListener tabListener = new ArdudroidTabListener(this);
+		TabListener tabListener = new ArduDroidTabListener(this);
 
 		Tab tab1 = getSupportActionBar().newTab().setTag(Tag.MONITOR)
 				.setText(getString(R.string.monitor))

@@ -12,7 +12,7 @@ import com.xgxzatx.ardudroid.R;
 import com.xgxzatx.ardudroid.fragment.ControlFragment;
 import com.xgxzatx.ardudroid.fragment.MonitorFragment;
 
-public class ArdudroidTabListener implements ActionBar.TabListener {
+public class ArduDroidTabListener implements ActionBar.TabListener {
 	
 	private final SherlockFragmentActivity activity;
 	
@@ -22,7 +22,7 @@ public class ArdudroidTabListener implements ActionBar.TabListener {
 		MONITOR, CONTROL;
 	}
 
-	public ArdudroidTabListener(SherlockFragmentActivity activity) {
+	public ArduDroidTabListener(SherlockFragmentActivity activity) {
 		this.activity = activity;
 	}
 
