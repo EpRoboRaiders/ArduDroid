@@ -3,22 +3,19 @@ package com.xgxzatx.ardudroid.task;
 import com.xgxzatx.ardudroid.connectivity.PostClient;
 import android.os.AsyncTask;
 
-public class PostMonitorData extends AsyncTask<String, Object, String>{
+public class PostMonitorData extends AsyncTask<String, Object, String> {
 
-	private final static String ENDPOINT = "";
-	
+	private final static String ENDPOINT = "http://192.168.1.252";
+
 	@Override
 	protected String doInBackground(String... params) {
+		String result = null;
 		try {
-			postDataToMonitor();
-		} catch(Exception e) {
+			result = new PostClient(ENDPOINT).post();
+		} catch (Exception e) {
 			return e.getMessage();
-		}			
-		return null;
+		}
+		return result;
 	}
-	
-	protected String postDataToMonitor() {
-		return new PostClient(ENDPOINT).post();		
-	}
-	
+
 }
